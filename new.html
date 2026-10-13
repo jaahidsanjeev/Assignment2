@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .show {
+            color: red;
+        }
+
+        .hide {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <button id="show">touch</button>
+    <label id="showlabel"></label>
+
+    <script>
+        var Boolean = false;
+
+        const button = document.getElementById('show');
+        const label = document.getElementById('showlabel');
+
+        button.addEventListener('click', function() {
+
+            Boolean = !Boolean;
+
+            label.textContent = `${Boolean ? "label is visible" : "label is not visible"}`;
+
+            label.className = `${Boolean ? "show" : "hide"}`;
+
+        });
+    </script>
+
+</body>
+</html>

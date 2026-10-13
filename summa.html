@@ -1,0 +1,151 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Jaahid Sanjeev - Resume</title>
+    <style>
+        body {
+            font-family: Georgia, serif;
+            margin: 10px;
+            padding: 20px;
+            background: linear-gradient(to right, white, lightgreen);
+            color: black;
+        }
+        h1, h2 {
+            color: darkgreen;
+        }
+        img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+         button {
+            background: green;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            cursor: pointer;
+        }
+        table {
+            width: 100%;
+            background: white;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid green;
+            padding: 10px;
+            text-align: left;
+        }
+        .dark {
+            background: black;
+            color: white;
+        }
+        .dark h1, .dark h2 {
+            color: green;
+        }
+        .dark table {
+            background:gray;
+            color: white;
+        }
+        
+        
+    </style>
+</head>
+<body>
+<center>
+        <h1>Jaahid Sanjeev J</h1>
+        <img id="profile" src="profilepic.webp" alt="Profile Picture">
+        <br>
+        <button id="show">Hide Photo</button>
+        <button id="mode">Dark</button>
+        <p>Jaahidsanjeev.J@gmail.com</p>
+    </center>
+    <h2>About Me</h2>
+    <p>
+        Computer Science Engineering student interested in UI/UX design
+        and creating user-friendly applications.
+    </p>
+    <fieldset><legend><h2>Education Details</h2></legend>
+    <table>
+        <tr>
+            <th>Qualification</th>
+            <th>Institution</th>
+            <th>Marks</th>
+        </tr>
+        <tr>
+            <td>B.E.CSE</td>
+            <td>S.A.Engineering College</td>
+            <td>CGPA:7.24</td>
+        </tr>
+        <tr>
+            <td>12th Grade</td>
+            <td>Velammal</td>
+            <td>80</td>
+        </tr>
+        <tr>
+            <td>10th Grade</td>
+            <td>Prince Matriculation</td>
+            <td>100</td>
+        </tr>
+    </table></fieldset>
+
+    <h2>Technical Skills</h2>
+    <ul>
+        <li>Java Basics</li>
+        <li>Figma and UI/UX Design</li>
+        <li>Canva and Graphic Design</li>
+    </ul>
+    <h2>Projects</h2>
+    <ol>
+        <li>Chennai Port Ticketing Tool</li>
+        <li>Puthuvai Bazaar</li>
+        <li>Dress Rental E-commerce Website</li>
+    </ol>
+     <h2>Internship Experience</h2>
+    <p>Ecbee Innovations Pvt.Ltd.-Software Developer Intern</p>
+    <p>Chennai Port Authority-Software Developer Intern</p>
+
+    <h2>Certifications</h2>
+    <ul>
+        <li>AWS Academy-Cloud Foundations</li>
+        <li>Introduction to Figma</li>
+        <li>Mendix Developer Certification</li>
+        <li>Pearson Mepro Level 10</li>
+    </ul>
+    <h2>Declaration</h2>
+    <p>I hereby declare that the information provided is true.</p>
+    <hr style="color: black;">
+     <center>
+        <button id="count">Download Resume</button>
+        <p>Download Count: <label id="plus">0</label></p>
+    </center>
+    <script>
+        var Boolean= true;
+        const button= document.getElementById('show');
+        const profile= document.getElementById('profile');
+        button.addEventListener('click', function() {
+            Boolean= !Boolean;
+            profile.style.display=`${Boolean? "block" : "none"}`;
+            show.textContent=`${Boolean? "Hidephoto" : "showphoto"}`;
+        });
+        var darkMode= false;
+        const modeButton= document.getElementById('mode');
+        modeButton.addEventListener('click',function() {
+            darkMode= !darkMode;
+            document.body.className=`${darkMode ? "dark":""}`;
+            modeButton.textContent=`${darkMode ? "Light":"Dark"}`;
+        });
+        var count=0;
+        const downloadB = document.getElementById('count');
+        const label = document.getElementById('plus');
+        downloadB.addEventListener('click', function(){
+            count=count+1;
+            label.textContent =count;
+        })
+        </script>
+        </body>
+</html>
